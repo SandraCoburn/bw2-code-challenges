@@ -23,16 +23,17 @@ Output: true
 #put the duplicates into another array
 #compare the duplicates to array and return true or false if condition met
  duplicates = []
+     duplicates = []
     for i, num in enumerate(nums):
         for i2, num2 in enumerate(nums):
             if i == i2:
                 continue
             if num == num2:
                 duplicates.append(num)
-        if num in duplicates:
-            return True
-        else:
-            return False
+    if num in duplicates:
+        return True
+    else:
+        return False
 '''
 '''
   #sorting the array
@@ -59,11 +60,11 @@ def containsDuplicate(nums):
         else: 
             h[num] = 1
     return False
-        
-  
+   
 
 arr1 = [1,2,3,1]
 arr2 = [1,2,3,4]
 arr3 = [1,1,1,3,3,4,3,2,4,2]
+arr4 = [2,14,18,22,22]
 
-print(containsDuplicate(arr3))
+print(containsDuplicate(arr4))
