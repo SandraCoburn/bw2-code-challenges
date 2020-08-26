@@ -67,4 +67,4 @@ arr2 = [1,2,3,4]
 arr3 = [1,1,1,3,3,4,3,2,4,2]
 arr4 = [2,14,18,22,22]
 
-print(containsDuplicate(arr4))
+print(containsDuplicate(arr2))

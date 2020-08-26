@@ -9,13 +9,8 @@ Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 Output: 7 -> 0 -> 8
 Explanation: 342 + 465 = 807.
 '''
-class LisNode(object):
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
-    def addTwoNumbers(self, l1, l2):
-        # keep track of the digist on each list
+'''
+ # keep track of the digist on each list
         result = LisNode(0)
         result_tail = result
         carry = 0
@@ -31,9 +26,33 @@ class LisNode(object):
             l1 = (l1.next if l1 else None)
             l2 = (l2.next if l2 else None)
         return result.next
+'''
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+    def addTwoNumbers(self, l1, l2 ,c = 0):
+        """
+        :type l1: ListNode
+        :type l2: ListNode
+        :rtype: ListNode
+        """
+        val = l1.val + l2.val + c
+        c = val // 10
+        ret = ListNode(val % 10 ) 
+        
+        if (l1.next != None or l2.next != None or c != 0):
+            if l1.next == None:
+                l1.next = ListNode(0)
+            if l2.next == None:
+                l2.next = ListNode(0)
+            ret.next = self.addTwoNumbers(l1.next,l2.next,c)
+        return ret
+      
 
 l1 = [2,4,3]
 l2 = [5,6,4]
-l = LisNode()
+l = ListNode()
 print(l.addTwoNumbers(l1,l2))
 # addTwoNumbers(l1,l2)
