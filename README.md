@@ -23,10 +23,13 @@ Your function should return true if any value appears at least twice in the arra
 >
 > Example 2:
 
-Input: [1,2,3,4]
-Output: false
-Example 3:
+> Input: [1,2,3,4]
+>
+> Output: false
+>
+> Example 3:
 
-Input: [1,1,1,3,3,4,3,2,4,2]
-Output: true
+> Input: [1,1,1,3,3,4,3,2,4,2]
+>
+> Output: true
 
