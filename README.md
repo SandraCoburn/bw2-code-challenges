@@ -18,9 +18,9 @@ Your function should return true if any value appears at least twice in the arra
 * Example 1:
 
 > Input: [1,2,3,1] 
-<br>
+>
 > Output: true
-<br>
+>
 > Example 2:
 
 Input: [1,2,3,4]
